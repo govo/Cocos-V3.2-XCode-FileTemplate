@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include "cocos2d.h"
 
-class ___FILEBASENAMEASIDENTIFIER___: cocos2d::Layer{
+class ___FILEBASENAMEASIDENTIFIER___:public cocos2d::Layer{
     
     
 public:
