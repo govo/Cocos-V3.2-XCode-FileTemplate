@@ -32,6 +32,9 @@ bool ___FILEBASENAMEASIDENTIFIER___::init()
         return false;
     }
     //init your layer here
+    auto dirs = Director::getInstance();
+    Size visibleSize = dirs->getVisibleSize();
+    Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
     return true;
 }
@@ -43,9 +46,9 @@ void ___FILEBASENAMEASIDENTIFIER___::onEnter()
     
     auto listener = EventListenerTouchOneByOne::create();
     listener->setSwallowTouches(true);
-    listener->onTouchBegan = CC_CALLBACK_2(GameLayer::onTouchBegan, this);
-    listener->onTouchMoved = CC_CALLBACK_2(GameLayer::onTouchMoved, this);
-    listener->onTouchEnded = CC_CALLBACK_2(GameLayer::onTouchEnded, this);
+    listener->onTouchBegan = CC_CALLBACK_2(___FILEBASENAMEASIDENTIFIER___::onTouchBegan, this);
+    listener->onTouchMoved = CC_CALLBACK_2(___FILEBASENAMEASIDENTIFIER___::onTouchMoved, this);
+    listener->onTouchEnded = CC_CALLBACK_2(___FILEBASENAMEASIDENTIFIER___::onTouchEnded, this);
     
     _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
 }
