@@ -77,5 +77,4 @@ void ___FILEBASENAMEASIDENTIFIER___::onTouchEnded(cocos2d::Touch *touch, cocos2d
 }
 
 
-@end
 
